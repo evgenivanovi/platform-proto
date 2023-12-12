@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package api.pb.common;
+
+option go_package = "github.com/evgenivanovi/platform-proto-go/api/pb/common";
+
+import "api/pb/std/timestamp.proto";
+
+import "google/protobuf/timestamp.proto";
+
+// __________________________________________________
+
+message Metadata {
+  google.protobuf.Timestamp created_at = 1;
+  std.OptionalTimestamp updated_at = 2;
+  std.OptionalTimestamp deleted_at = 3;
+}
+
+// __________________________________________________

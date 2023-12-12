@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package api.pb.std;
+
+option go_package = "github.com/evgenivanovi/platform-proto-go/api/pb/std";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+
+// __________________________________________________
+
+message OptionalTimestamp {
+  oneof kind {
+    google.protobuf.NullValue null = 1;
+    google.protobuf.Timestamp data = 2;
+  }
+}
+
+// __________________________________________________
